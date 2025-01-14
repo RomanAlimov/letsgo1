@@ -27,13 +27,13 @@ func main() {
 
 	bh.Handle(func(bot *telego.Bot, update telego.Update) {
 		if update.Message == nil {
-			return // Игнорируем обновления без сообщений
+			return 
 		}
 
 		chatID := tu.ID(update.Message.Chat.ID)
 
-		// Обработка нажатий кнопок или ввода текста
-		text := "Бот еще в разработке.." // Default message
+		
+		text := "Бот еще в разработке.." 
 		switch strings.ToLower(update.Message.Text) {
 		case "запуск нейросети":
 			text = "Запускаем нейросеть..."
@@ -61,7 +61,7 @@ func main() {
 		if err != nil {
 			fmt.Println("Error sending message:", err)
 		}
-	}, th.Any()) // Обрабатываем любые сообщения
+	}, th.Any()) 
 
 	bh.Start()
 }
