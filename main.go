@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	Token := "7649681669:AAFic1YnN2AP7F7rX9QLu9kwOZ32hqg5uJk"
+	Token := ""
 
 	bot, err := telego.NewBot(Token, telego.WithDefaultDebugLogger())
 	if err != nil {
